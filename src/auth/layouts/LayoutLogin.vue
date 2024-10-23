@@ -3,7 +3,7 @@
     <div></div>
     <q-layout view="lHh Lpr lFf" :class="{ 'ios-browser-swiping-back': true }">
       <!-- <q-header elevated> </q-header> -->
-      <div class="auth-header"></div>
+      <!-- <div class="auth-header"></div> -->
       <q-page-container>
         <router-view v-slot="{ Component }">
           <component :is="Component" />

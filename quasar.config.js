@@ -55,9 +55,9 @@ module.exports = configure(function (/* ctx */) {
 
       vueRouterMode: 'history', // available values: 'hash', 'history'
       env: {
-        SUPABASE_URL: 'https://ocigptoyvbhsnmdignyp.supabase.co',
+        SUPABASE_URL: 'https://alubxysgzbwqztwbwsvo.supabase.co',
         SUPABASE_KEY:
-          'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9jaWdwdG95dmJoc25tZGlnbnlwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDg0ODUzNzMsImV4cCI6MjAyNDA2MTM3M30.6Zw0REYdbCVuvNzwT2IZlhVmN3bF-RIHpj83hs45Qio',
+          'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFsdWJ4eXNnemJ3cXp0d2J3c3ZvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjkwMzkyMjEsImV4cCI6MjA0NDYxNTIyMX0.en2RO_edFoMOZiKMi6Y0Acy3tzi-ppPsljHfRm8BCB4',
       },
       // vueRouterBase,
       // vueDevtools,
@@ -93,7 +93,7 @@ module.exports = configure(function (/* ctx */) {
       config: {
         brand: {
           primary: '#3B5999',
-          secondary: '#DE4B39',
+          secondary: '#D2102B',
           accent: '#5ab3c7',
 
           dark: '#1d1d1d',

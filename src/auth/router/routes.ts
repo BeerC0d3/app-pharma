@@ -11,7 +11,7 @@ export default [
         path: '/auth',
         component: () => import('../pages/AuthPage.vue'),
         children: [
-          { path: 'login', component: () => import('../pages/Login.vue') },
+          { path: 'login', component: () => import('../pages/SignIn.vue') },
           {
             path: 'register',
             component: () => import('../pages/userSignUp.vue'),

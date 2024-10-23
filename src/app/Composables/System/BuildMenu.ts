@@ -8,7 +8,7 @@ const menuEntity = ref<IMenuEntity[]>([]);
 
 const getMenu = async () => {
   try {
-    menuEntity.value = await TableToList('system', 'menu');
+    menuEntity.value = await TableToList('System', 'Menu');
     CreateMenu(menuEntity.value);
   } catch (error: any) {
     console.log(error);

@@ -1,4 +1,3 @@
-import { reactive, ref } from 'vue';
 import { createClient } from '@supabase/supabase-js';
 import useAuthUser from 'src/auth/composables/userAuth';
 
