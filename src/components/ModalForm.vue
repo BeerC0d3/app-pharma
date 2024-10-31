@@ -14,7 +14,7 @@
             unelevated
             rounded
             no-caps
-            color="secondary"
+            color="negative"
             label="Cancelar"
             v-close-popup
             @click="(value) => SetState(value, true)"

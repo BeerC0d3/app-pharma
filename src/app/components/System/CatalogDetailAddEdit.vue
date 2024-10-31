@@ -97,8 +97,8 @@ const loadData = async () => {
   if (id.value > 0) {
     $commonStore.Add_Request();
     objectCatalogDetail.value = await getById(
-      'system',
-      'catalogdetail',
+      'System',
+      'CatalogDetail',
       id.value
     );
   } else reset();
@@ -119,7 +119,7 @@ const onValidation = async (evt: any) => {
             objectCatalogDetail.value
           );
 
-          await updateData('system', 'catalogdetail', objectProcessed);
+          await updateData('System', 'CatalogDetail', objectProcessed);
         } else {
           objectProcessed = useRemoveProperty.removeAddProperty(
             ['id'],
@@ -131,7 +131,7 @@ const onValidation = async (evt: any) => {
             ],
             objectCatalogDetail.value
           );
-          await insertData('system', 'catalogdetail', objectProcessed);
+          await insertData('System', 'CatalogDetail', objectProcessed);
         }
 
         formCatalog.value.reset();

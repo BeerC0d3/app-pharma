@@ -1,62 +1,55 @@
 <template>
   <div class="container-template">
-    <div class="let-you-page-main">
-      <div class="let-you-screen-main">
-        <header class="back-btn back-btn2"></header>
-        <div class="logo_img_main">
+    <div class="justify-center items-center content-center h-100">
+      <div class="sign-in-area">
+        <div class="heading-2">
           <img class="img img-fluid" src="~assets/pets.png" />
+          <p class="text-primary heading-2">Ingresar</p>
         </div>
-      </div>
-      <div class="footer_box footer_sign_in">
-        <div class="lets_you_in_box lets_you_in_box3">
-          <h2 class="lets_you_in_text">Ingresar</h2>
-          <q-form class="q-gutter-y-md" @submit.prevent="handleLogin">
-            <div class="col-md-4 col-sm-6 col-xs-10">
-              <q-input
-                rounded
-                outlined
-                label="Email"
-                v-model="formLogin.email"
-                lazy-rules
-                stack-label
-                :rules="[
-                  (val) => (val && val.length > 0) || 'Email es requerido',
-                ]"
-                type="email"
-              >
-                <template v-slot:prepend>
-                  <q-icon name="email" color="primary" />
-                </template>
-              </q-input>
+        <q-form class="q-gutter-y-md" @submit.prevent="handleLogin">
+          <div class="col-md-4 col-sm-6 col-xs-10">
+            <q-input
+              outlined
+              label="Email"
+              v-model="formLogin.email"
+              lazy-rules
+              stack-label
+              :rules="[
+                (val) => (val && val.length > 0) || 'Email es requerido',
+              ]"
+              type="email"
+            >
+              <template v-slot:prepend>
+                <q-icon name="email" color="primary" />
+              </template>
+            </q-input>
 
-              <q-input
-                rounded
-                outlined
-                label="Password"
-                v-model="formLogin.password"
-                lazy-rules
-                stack-label
-                :rules="[
-                  (val) => (val && val.length > 0) || 'Password es requerido',
-                ]"
-                type="password"
-              >
-                <template v-slot:prepend>
-                  <q-icon name="lock" color="primary" />
-                </template>
-              </q-input>
+            <q-input
+              outlined
+              label="Password"
+              v-model="formLogin.password"
+              lazy-rules
+              stack-label
+              :rules="[
+                (val) => (val && val.length > 0) || 'Password es requerido',
+              ]"
+              type="password"
+            >
+              <template v-slot:prepend>
+                <q-icon name="lock" color="primary" />
+              </template>
+            </q-input>
 
-              <div class="full-width q-pt-md">
-                <q-btn
-                  no-caps
-                  label="Ingresar"
-                  color="secondary"
-                  class="full-width"
-                  rounded
-                  type="submit"
-                />
-              </div>
-              <!-- <div class="full-width q-gutter-y-sm">
+            <div class="full-width q-pt-md">
+              <q-btn
+                no-caps
+                label="Ingresar"
+                color="primary"
+                class="full-width"
+                type="submit"
+              />
+            </div>
+            <!-- <div class="full-width q-gutter-y-sm">
                 <q-btn
                   no-caps
                   label="Registrar"
@@ -65,8 +58,8 @@
                   to="/auth/register"
                 />
               </div> -->
-            </div>
-            <!-- <div class="card-icon-message text-center shadow-3">
+          </div>
+          <!-- <div class="card-icon-message text-center shadow-3">
               <q-btn
                 round
                 dense
@@ -77,10 +70,18 @@
                 type="submit"
               />
             </div> -->
-          </q-form>
-        </div>
+        </q-form>
       </div>
     </div>
+    <!-- <div class="let-you-page-main">
+      <div class="let-you-screen-main">
+        <header class="back-btn back-btn2"></header>
+        <div class="logo_img_main">
+          <img class="img img-fluid" src="~assets/pets.png" />
+        </div>
+      </div>
+
+    </div> -->
   </div>
 </template>
 <script setup lang="ts">

@@ -62,7 +62,7 @@ const { Show, Hide, GetModal } = useModelMessage();
 const isUpdate = computed(() => route.params.catid);
 onBeforeMount(async () => {
   catId.value = parseInt(isUpdate.value.toString());
-  catalog.value = await getById('system', 'catalog', catId.value);
+  catalog.value = await getById('System', 'Catalog', catId.value);
   if (isUpdate.value) {
     await getCatalogDetail();
   }

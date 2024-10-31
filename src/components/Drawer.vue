@@ -1,7 +1,7 @@
 <template>
   <div class="app-drawer">
     <q-drawer
-      class="bg-secondary"
+      class="bg-negative"
       v-model="leftDrawerOpen"
       side="left"
       overlay

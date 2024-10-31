@@ -90,7 +90,7 @@ const loadData = async () => {
     if (item.key == 'id' && parseInt(item.value) > 0) {
       $commonStore.Add_Request();
       id.value = parseInt(item.value);
-      objectCatalog.value = await getById('system', 'catalog', id.value);
+      objectCatalog.value = await getById('System', 'Catalog', id.value);
     } else reset();
   });
 };
@@ -109,7 +109,7 @@ const onValidation = async (evt: any) => {
             objectCatalog.value
           );
 
-          await updateData('system', 'catalog', objectProcessed);
+          await updateData('System', 'Catalog', objectProcessed);
         } else {
           objectProcessed = useRemoveProperty.removeAddProperty(
             ['id'],
@@ -121,7 +121,7 @@ const onValidation = async (evt: any) => {
             ],
             objectCatalog.value
           );
-          await insertData('system', 'catalog', objectProcessed);
+          await insertData('System', 'Catalog', objectProcessed);
         }
 
         formCatalog.value.reset();

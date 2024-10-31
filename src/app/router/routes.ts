@@ -30,6 +30,17 @@ export default [
           // },
         ],
       },
+      {
+        path: 'Customer',
+        redirect: '/app/Customer/Customer',
+
+        children: [
+          {
+            path: 'Customer',
+            component: () => import('../pages/Customer/Customer.vue'),
+          },
+        ],
+      },
       // {
       //   path: 'Usuarios',
       //   children: [

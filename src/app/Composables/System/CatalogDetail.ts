@@ -7,8 +7,8 @@ export default function useCatalogDetailApi() {
 
   const getByCatalogId = async (catid: number) => {
     const { data, error } = await supabase
-      .schema('system')
-      .from('catalogdetail')
+      .schema('System')
+      .from('CatalogDetail')
       .select('*')
       .eq('catid', catid);
 
@@ -17,6 +17,18 @@ export default function useCatalogDetailApi() {
 
     return data;
   };
+  // const getByCatalogCve = async (CatalogCve: string) => {
+  //   const { data, error } = await supabase
+  //     .schema('System')
+  //     .from('CatalogDetail')
+  //     .select('*')
+  //     .eq('catid', catid);
+
+  //   if (error) throw error;
+  //   $commonStore.Remove_Request();
+
+  //   return data;
+  // };
 
   return { getByCatalogId };
 }

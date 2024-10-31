@@ -10,9 +10,9 @@ export interface ICatalogoSelect {
 
 export interface ICatalogoProperty {
   id: number;
-  clave: string;
-  descripcion: string;
-  activo: boolean;
+  catdetkey: string;
+  catdetname: string;
+  isdeleted: boolean;
 }
 
 export interface ICatalogo {
