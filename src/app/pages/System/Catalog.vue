@@ -5,15 +5,36 @@
   <page-body>
     <div class="q-pa-md">
       <div class="row q-mb-md">
-        <span class="text-h6 text-primary"> Cátalogo </span>
+        <span class="text-h6 text-primary">Listado</span>
         <q-space />
+
         <q-btn
-          round
-          icon="add"
+          outline
+          rounded
+          no-caps
+          label="Agregar"
           size="12px"
           color="primary"
           @click="clickModalForm"
         />
+      </div>
+      <div class="row q-mb-md">
+        <q-input
+          rounded
+          clearable
+          outlined
+          dense
+          class="WAL__field col-grow q-mr-sm"
+          bg-color="white"
+          v-model="txtNombre"
+          placeholder="Busca catalogo"
+        >
+          <template v-slot:prepend>
+            <q-icon name="search" />
+          </template>
+        </q-input>
+
+        <q-btn flat round color="primary" icon="fa-solid fa-filter" />
       </div>
       <empty-data
         icon="fa-solid fa-pager"
@@ -58,7 +79,7 @@ const router = useRouter();
 const bus = inject<any>('bus');
 
 const listCatalog = ref<ICatalog[]>([]);
-
+const txtNombre = ref('');
 const clickModalForm = () => {
   $modalStore.ShowModal(1, [{ key: 'id', value: '0' }]);
 };

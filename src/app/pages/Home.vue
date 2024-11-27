@@ -18,6 +18,7 @@
       </p>
     </div>
   </page-body>
+  <page-footer />
 </template>
 <script setup lang="ts">
 import useAuthUser from 'src/auth/composables/userAuth';

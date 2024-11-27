@@ -16,13 +16,13 @@
         </div>
 
         <div class="q-pl-sm q-gutter-sm row items-center no-wrap">
-          <q-btn
+          <!-- <q-btn
             dense
             flat
             round
             icon="fa-solid fa-right-from-bracket"
             @click="handledLogout"
-          />
+          /> -->
 
           <!-- <q-btn v-if="$q.screen.gt.xs" dense flat round icon="apps">
             <q-tooltip>Cambiar sucursal</q-tooltip>

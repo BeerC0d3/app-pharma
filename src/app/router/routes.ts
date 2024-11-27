@@ -41,6 +41,15 @@ export default [
           },
         ],
       },
+      {
+        path: 'Test',
+        children: [
+          {
+            path: 'Camera',
+            component: () => import('../pages/Test/Camera.vue'),
+          },
+        ],
+      },
       // {
       //   path: 'Usuarios',
       //   children: [

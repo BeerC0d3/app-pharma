@@ -8,8 +8,10 @@
         <span class="text-h6 text-primary"> Listado </span>
         <q-space />
         <q-btn
-          round
-          icon="add"
+          outline
+          rounded
+          label="Agregar"
+          no-caps
           size="12px"
           color="primary"
           @click="clickModalForm"
@@ -29,8 +31,8 @@
           subTitle: '',
           titleSideTop: '',
           titleSideBottom: '',
-          iconSide: true,
-          avatar: false,
+          iconSide: false,
+          avatar: true,
         }"
         :edit="fnEdit"
         :to="fnRouteTo"
@@ -39,6 +41,7 @@
   </page-body>
   <useModalCustomer />
   <modal-message :modal="GetModal().value" @close="Hide()" />
+  <page-footer />
 </template>
 <script setup lang="ts">
 import { ref, onBeforeMount } from 'vue';
