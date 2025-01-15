@@ -6,6 +6,7 @@
         rounded
         no-caps
         color="primary"
+        size="sm"
         label="Guardar"
         @click="onValidation"
         @reset="reset"
@@ -88,7 +89,6 @@ import {
   IPropertyObject,
   ICatalogoProperty,
 } from 'src/app/Models/System/IModel';
-import { ICustomer } from 'src/app/Models/Customer/IModel';
 
 const timeStamp = Date.now();
 const id = ref(0);
@@ -151,7 +151,7 @@ const onValidation = async (evt: any) => {
       try {
         $commonStore.Add_Request();
         let objectProcessed = null;
-        //objectCustomer.value.catid = catid.value;
+        // objectCustomer.value = catid.value;
 
         if (id.value > 0) {
           objectProcessed = useRemoveProperty.removeAddProperty(

@@ -17,6 +17,7 @@
             color="negative"
             label="Cancelar"
             v-close-popup
+            size="sm"
             @click="(value) => SetState(value, true)"
           />
           <q-space />

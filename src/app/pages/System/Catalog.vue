@@ -5,7 +5,7 @@
   <page-body>
     <div class="q-pa-md">
       <div class="row q-mb-md">
-        <span class="text-h6 text-primary">Listado</span>
+        <span class="text-subtitle1 text-primary">Listado</span>
         <q-space />
 
         <q-btn
@@ -13,7 +13,7 @@
           rounded
           no-caps
           label="Agregar"
-          size="12px"
+          size="sm"
           color="primary"
           @click="clickModalForm"
         />
@@ -25,22 +25,23 @@
           outlined
           dense
           class="WAL__field col-grow q-mr-sm"
-          bg-color="white"
+          bg-color="grey-2"
           v-model="txtNombre"
           placeholder="Busca catalogo"
         >
           <template v-slot:prepend>
-            <q-icon name="search" />
+            <q-icon name="search" color="primary" />
           </template>
         </q-input>
 
-        <q-btn flat round color="primary" icon="fa-solid fa-filter" />
+        <!-- <q-btn flat round color="primary" icon="fa-solid fa-filter" /> -->
       </div>
       <empty-data
         icon="fa-solid fa-pager"
         label="No hay ningún cátalogo."
         v-if="listCatalog.length == 0"
       />
+
       <useSlideItem
         v-for="catalog in listCatalog"
         :key="catalog.id"

@@ -1,16 +1,27 @@
 <template>
   <page-header>
     <template #buttons-left>
-      <page-header-btn-back label="Atras" />
+      <page-header-btn-back label="" />
     </template>
-    <template #title></template>
+    <template #title>Catalogo detalle</template>
   </page-header>
   <page-body>
     <div class="q-pa-md">
       <div class="row q-mb-md">
-        <span class="text-h6 text-primary"> {{ catalog?.catname }} </span>
+        <span class="text-subtitle1 text-primary">
+          {{ catalog?.catname }}
+        </span>
         <q-space />
-        <q-btn round icon="add" color="secondary" @click="clickModalForm" />
+
+        <q-btn
+          outline
+          rounded
+          no-caps
+          label="Agregar"
+          size="12px"
+          color="primary"
+          @click="clickModalForm"
+        />
       </div>
       <empty-data
         icon="fa-solid fa-pager"

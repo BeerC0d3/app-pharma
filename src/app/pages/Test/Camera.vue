@@ -43,11 +43,10 @@
 }
 </style>
 <script setup lang="ts">
-import { Ref, ref, onUnmounted } from 'vue';
+import { Ref, ref } from 'vue';
 import useApi from 'src/app/Composables/UseApi';
 import { useCommonStore } from 'src/stores/all';
 import { QFile } from 'quasar';
-import { decode } from 'base64-arraybuffer';
 
 const { uploadFile } = useApi();
 const $commonStore = useCommonStore();
@@ -57,7 +56,7 @@ const file = ref() as Ref<QFile>;
 
 const handleUpload = async (e: Event) => {
   $commonStore.Add_Request();
-  await uploadFile(image.value);
+  await uploadFile('products', image.value);
 
   if (image.value) {
     imageUrl.value = URL.createObjectURL(image.value);

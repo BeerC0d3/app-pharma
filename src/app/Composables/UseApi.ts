@@ -44,20 +44,29 @@ export default function useApi() {
     $commonStore.Remove_Request();
     return data[0];
   };
-  const uploadFile = async (fileBase64:any)=>{
+  const uploadFile = async (storage: string,fileBase64:any)=>{
     const { data, error } = await supabase
     .storage
-    .from('products')
+    .from(storage)
     .upload(`product_${Date.now()}.png`,fileBase64 , {
       contentType: 'image/png'
     })
     if(error) throw error;
     $commonStore.Remove_Request();
-    console.log(data)
+ //   console.log(data)
 
     return data;
 
   };
 
-  return { TableToList, insertData, updateData, getById, uploadFile };
+  const getUrlImage = async(storage: string,nameImage:string)=>{
+
+
+    return supabase
+    .storage
+    .from(storage)
+    .getPublicUrl(nameImage)
+  }
+
+  return { TableToList, insertData, updateData, getById, uploadFile,getUrlImage };
 }

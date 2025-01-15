@@ -1,7 +1,7 @@
 <template>
   <header
     id="header-master"
-    class="page-header app-header q-header q-layout__section--marginal fixed-top q-header--bordered absolute-top bg-header"
+    class="page-header q-header q-layout__section--marginal fixed-top absolute-top bg-header"
   >
     <div class="container-template">
       <q-toolbar>
@@ -60,24 +60,24 @@ const $drawerStore = useDrawerStore();
 const toggle = ref(false);
 const $route = useRoute();
 
-onMounted(() => {
-  //useHeader.setHeaderAmount();
+// onMounted(() => {
+//   //useHeader.setHeaderAmount();
 
-  const div = document.getElementById('header-master') as HTMLElement;
-  if (
-    $route.name == 'Cooperacion' ||
-    $route.name == 'MiCooperacion' ||
-    $route.name == 'VentaBoletosBus'
-  ) {
-    console.log('entre a cooperacion');
-    if (div.classList.contains('app-header')) {
-      div.classList.add('app-header');
-    }
-  } else {
-    if (div.classList.contains('app-header'))
-      div.classList.remove('app-header');
-  }
-});
+//   const div = document.getElementById('header-master') as HTMLElement;
+//   if (
+//     $route.name == 'Cooperacion' ||
+//     $route.name == 'MiCooperacion' ||
+//     $route.name == 'VentaBoletosBus'
+//   ) {
+//     console.log('entre a cooperacion');
+//     if (div.classList.contains('app-header')) {
+//       div.classList.add('app-header');
+//     }
+//   } else {
+//     if (div.classList.contains('app-header'))
+//       div.classList.remove('app-header');
+//   }
+// });
 
 const toggleLeftDrawer = () => {
   toggle.value = true;

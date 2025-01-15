@@ -9,6 +9,7 @@
         label="Guardar"
         @click="onValidation"
         @reset="reset"
+        size="sm"
       />
     </template>
     <template #seccion-title>
@@ -23,6 +24,7 @@
           label="Clave cátalogo"
           lazy-rules
           class="col-lg-12 col-md-6 col-xs-12"
+          bg-color="grey-2"
           :rules="[(val) => (val && val.length > 0) || 'Campo obligatorio']"
         />
         <q-input
@@ -32,6 +34,7 @@
           label="Nombre cátalogo"
           lazy-rules
           class="col-lg-12 col-md-6 col-xs-12"
+          bg-color="grey-2"
           :rules="[(val) => (val && val.length > 0) || 'Campo obligatorio']"
         />
       </q-form>

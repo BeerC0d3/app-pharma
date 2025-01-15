@@ -18,6 +18,7 @@
                 (val) => (val && val.length > 0) || 'Email es requerido',
               ]"
               type="email"
+              bg-color="grey-2"
             >
               <template v-slot:prepend>
                 <q-icon name="email" color="primary" />
@@ -34,6 +35,7 @@
                 (val) => (val && val.length > 0) || 'Password es requerido',
               ]"
               type="password"
+              bg-color="grey-2"
             >
               <template v-slot:prepend>
                 <q-icon name="lock" color="primary" />
@@ -43,6 +45,7 @@
             <div class="full-width q-pt-md">
               <q-btn
                 no-caps
+                rounded
                 label="Ingresar"
                 color="primary"
                 class="full-width"

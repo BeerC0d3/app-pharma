@@ -5,14 +5,14 @@
   <page-body>
     <div class="q-pa-md">
       <div class="row q-mb-md">
-        <span class="text-h6 text-primary"> Listado </span>
+        <span class="text-subtitle1 text-primary"> Listado </span>
         <q-space />
         <q-btn
           outline
           rounded
           label="Agregar"
           no-caps
-          size="12px"
+          size="sm"
           color="primary"
           @click="clickModalForm"
         />

@@ -42,6 +42,21 @@ export default [
         ],
       },
       {
+        path: 'Product',
+        component: () => import('../pages/Product/ProductPage.vue'),
+        redirect: '/app/Product/List',
+        children: [
+          {
+            path: 'List',
+            component: () => import('../pages/Product/ListProduct.vue'),
+          },
+          {
+            path: 'ManageProduct',
+            component: () => import('../pages/Product/ProductAddEdit.vue'),
+          },
+        ],
+      },
+      {
         path: 'Test',
         children: [
           {
