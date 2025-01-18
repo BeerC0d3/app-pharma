@@ -57,6 +57,17 @@ export default [
         ],
       },
       {
+        path: 'Order',
+        redirect: '/app/Order/List',
+
+        children: [
+          {
+            path: 'List',
+            component: () => import('../pages/Orders/ListOrder.vue'),
+          },
+        ],
+      },
+      {
         path: 'Test',
         children: [
           {

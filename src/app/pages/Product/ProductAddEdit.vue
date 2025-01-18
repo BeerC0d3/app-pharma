@@ -19,11 +19,7 @@
         <q-responsive :ratio="16 / 9" class="col">
           <q-card class="column" flat bordered>
             <q-img
-              :src="
-                imageUrl != ''
-                  ? imageUrl
-                  : 'http://petzooexpress.com.mx/wp-content/uploads/2019/05/imagen-lista-producto-sin-foto-2-4.png'
-              "
+              v-bind:src="imageUrl != '' ? imageUrl : objImage.imageSrc"
               class="col-lg-12 col-md-12 col-xs-12 rounded-borders"
             >
               <div
@@ -213,11 +209,14 @@ const { getByCatalogId } = useDetApi();
 const formProduct = ref<any>(null);
 const $modalStore = useModalStore();
 const timeStamp = Date.now();
+const notImage = ref('src/assets/noproduct.png');
 
 const image = ref(null);
 const imageUrl = ref('');
 const file = ref() as Ref<QFile>;
-
+const objImage = {
+  imageSrc: new URL('../../../assets/noproduct.png', import.meta.url).href,
+};
 /**objectos */
 const objectProduct = ref<IProductEntity>({
   id: 0,

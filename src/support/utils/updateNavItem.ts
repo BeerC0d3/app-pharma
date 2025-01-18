@@ -17,9 +17,9 @@ const stateNav = reactive({
       label: 'Clientes',
     },
     {
-      name: 'Pedidos',
-      root: '/Pedidos',
-      to: '/app/Pedidos',
+      name: 'Order',
+      root: '/Order',
+      to: '/app/Order',
       icon: 'fa-solid fa-sack-dollar',
       label: 'Pedidos',
     },

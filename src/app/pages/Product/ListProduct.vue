@@ -60,8 +60,6 @@ const listProduct = ref<IProductView[] | any>([]);
 
 onBeforeMount(async () => {
   await loadCatalogs();
-  //listProduct.value = await getProductByLine(0);
-  //console.log(catline.value);
 });
 
 /**metodos para guardado */
@@ -76,35 +74,5 @@ const loadCatalogs = async () => {
 const getChecks = async (Id: number) => {
   console.log(Id);
   listProduct.value = await getProductByLine(Id);
-  // seccionId.value = parseInt(Id.toString());
-  // await LoadPersona();
-  //console.log('seccionId=>' + Id)
 };
-
-//   {
-//     id: 1,
-//     nombre: 'Bebidas',
-//     selected: false,
-//   },
-//   {
-//     id: 2,
-//     nombre: 'Botana',
-//     selected: false,
-//   },
-//   {
-//     id: 3,
-//     nombre: 'item 3',
-//     selected: false,
-//   },
-//   {
-//     id: 4,
-//     nombre: 'item 4',
-//     selected: false,
-//   },
-//   {
-//     id: 5,
-//     nombre: 'item 5',
-//     selected: false,
-//   },
-// ]);
 </script>
